@@ -9,7 +9,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
-  var _primariSwatch = Colors.blue;
+  var _primarySwatch = Colors.blue;
   var _isDark = false;
 
   @override
@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'AppBar Widget',
       theme: ThemeData(
-        primarySwatch: _primariSwatch,
+        primarySwatch: _primarySwatch,
         brightness: _isDark ? Brightness.dark : Brightness.light,
       ),
       home: Builder(
@@ -138,13 +138,13 @@ class _MyAppState extends State<MyApp> {
                 padding: const EdgeInsets.all(4),
                 width: 56,
                 color: Colors.transparent,
-                child: _primariSwatch == Colors.primaries[index]
+                child: _primarySwatch == Colors.primaries[index]
                     ? Icon(Icons.check, color: Colors.white)
                     : null,
               ),
               onTap: () {
                 setState(() {
-                  _primariSwatch = Colors.primaries[index];
+                  _primarySwatch = Colors.primaries[index];
                 });
               },
             ),
